@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :index]
     resources :reviews, only: [:new, :create, :index]
   end
+  get 'dashboard', to: 'users#dashboard', as: 'user_dashboard'
 end

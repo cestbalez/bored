@@ -1,15 +1,8 @@
 class UsersController < ApplicationController
-  def show
+  before_action :authenticate_user!
+
+  def dashboard
     @user = current_user
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(params_user)
-    @user.save
   end
 
   private
