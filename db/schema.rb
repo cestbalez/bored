@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_033619) do
+
+ActiveRecord::Schema.define(version: 2018_08_02_051402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.boolean "availability"
     t.string "photo"
     t.text "description"
