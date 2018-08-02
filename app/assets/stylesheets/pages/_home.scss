@@ -2,13 +2,26 @@
 .container-fluid {
   padding: 0px;
 }
-
+.row {
+  margin: 0px;
+}
 .trio-banner {
   padding: 0px;
-  background-size: cover;
+  background-size: inherit;
   background-repeat: no-repeat;
   position: relative;
   img {
     width: 100%;
   }
+}
+.container-explain {
+  color: #E8EEF2;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: -4%;
+}
+img {
+  max-width: 100%;
+  height: auto
 }
