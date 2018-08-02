@@ -1,0 +1,60 @@
+.container.main {
+  width: 980px;
+  height: 1000px;
+}
+
+.flex-container.top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.flex-container.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-picture {
+  height: 350px;
+  width: 350px;
+  border: solid 4px black;
+  margin-right: 30px;
+  color: white;
+
+}
+
+.article {
+  height: 350px;
+  width: 600px;
+  border: solid 4px black;
+  margin-right: 0px;
+  color: white;
+}
+
+.specifics {
+  height: 200px;
+  width: 250px;
+  border: solid 3px black;
+  bottom: 30px;
+  left: 75px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+.reviews {
+  height: 400px;
+  width: 580px;
+  border: solid 4px black;
+  color: white;
+  border-bottom: transparent;
+}
+
+.review {
+  border: solid 2px black;
+  height: 150px;
+  width: 572px;
+  color: white;
+  margin: 0px;
+}
