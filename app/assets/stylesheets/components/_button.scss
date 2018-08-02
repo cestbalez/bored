@@ -1,26 +1,29 @@
 .button{
-  position: absolute;
   font-family: Roboto;
   background-color: #5B6065;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.55);
+  border-radius: 45px;
 }
 
 #browse {
+  position: absolute;
   top: 92px;
   left: 90px;
   height: 70px;
   width: 250px;
-  border-radius: 45px;
   font-size: 35px;
-  color: white;
+  color: #E8EEF2;
   font-weight: bold;
   border: solid 4px #E8EEF2;
 }
 
 #login{
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
+  width: 124px;
+  height: 30px;
+  font-weight: regular;
   font-size: 14px;
   text-transform: lowercase;
+  color: #E8EEF2;
+  border: solid 2px #E8EEF2;
+  margin-left: -50%
 }
