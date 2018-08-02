@@ -1,0 +1,12 @@
+<div class="flex-container cards">
+  <div class= "container">
+    <div class= "row">
+      <% @boards.each do |board| %>
+      <div class= "col-xs-6">
+        <div class= "card"><%= board.title %></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="map">Map</div>
+</div>
