@@ -69,6 +69,8 @@ GEM
       railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.25)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
@@ -110,6 +112,8 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     puma (3.12.0)
+    pundit (2.0.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-proxy (0.6.4)
       rack
@@ -179,10 +183,13 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    timeliness (0.3.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.17)
       execjs (>= 0.3.0, < 3)
+    validates_timeliness (5.0.0.alpha3)
+      timeliness (~> 0.3.8)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.6.2)
@@ -207,6 +214,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3)
   devise
   dotenv-rails
+  faker
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
@@ -214,6 +222,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
+  pundit
   rails (= 5.2.0)
   redis
   sass-rails
@@ -221,6 +230,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier
+  validates_timeliness (~> 5.0.0.alpha3)
   web-console (>= 3.3.0)
   webpacker
 

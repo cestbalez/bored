@@ -15,6 +15,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -30,3 +31,5 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'validates_timeliness', '~> 5.0.0.alpha3'
+gem 'pundit'

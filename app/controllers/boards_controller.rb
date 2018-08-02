@@ -1,38 +1,45 @@
 class BoardsController < ApplicationController
+  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @boards = Board.all
+    @boards = policy_scope(Board)
   end
 
   def show
-    @board = Board.find(params[:id])
   end
 
   def new
     @board = Board.new
+    authorize @board
   end
 
   def create
     @board = Board.new(board_params)
+    authorize @board
     @board.user = current_user
     @board.save
   end
 
   def edit
-    @board = Board.find(params[:id])
+    authorize @board
   end
 
   def update
-    @board = Board.find(params[:id])
+    authorize @board
     @board.update(board_params)
   end
 
   def destroy
-    @board = Board.find(params[:id])
+    authorize @board
     @board.destroy
   end
 
   private
+
+  def set_board
+    @board = Board.find(params[:id])
+  end
 
   def board_params
     params.require(@board).permit(:title, :type, :photo, :location, :description)
