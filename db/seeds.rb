@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-User.destroy_all
+Booking.destroy_all
 Board.destroy_all
+User.destroy_all
 
-100.times do
+10.times do
 
   user = User.create(
     email: Faker::Internet.email,
@@ -19,11 +20,15 @@ Board.destroy_all
     password_confirmation: 123456
     )
 
-  board = Board.create(
-  title: Faker::Dog.meme_phrase.capitalize,
-  category: ['surf', 'skate', 'kite', 'snow', 'wake'].sample,
-  photo: "dsfasdf",
-  location: Faker::Address.full_address,
-  user_id: user.id,
-    )
+  rand(0..4).times do
+    board = Board.create(
+    title: Faker::Dog.meme_phrase.capitalize,
+    category: ['surf', 'skate', 'kite', 'snow', 'wake'].sample,
+    photo: "dsfasdf",
+    location: Faker::Address.full_address,
+    user_id: user.id,
+      )
+  end
 end
+
+
