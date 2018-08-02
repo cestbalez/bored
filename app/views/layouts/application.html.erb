@@ -9,9 +9,13 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
+  <body style="background: linear-gradient( #5B6065 0%, #37393A 58.01%) no-repeat; min-height: 100vh">
     <%= render 'shared/navbar' %>
     <%= yield %>
+
+
+
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
