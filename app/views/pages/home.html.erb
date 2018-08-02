@@ -1,29 +1,8 @@
-<div class="container main">
-  <div class="flex-container top">
-    <div class="article-picture"><p>Picture</p></div>
-    <div class="article">
-      <p>Burton 165cm prelude edition</p>
-    </div>
-  </div>
-
-  <div class="flex-container bottom">
-
-    <div class="specifics">
-      specifics
-    </div>
-
-    <div class="reviews"><p>Reviews</p>
-      <div class= "review">
-        <p>ceci est une review</p>
-        <div class="review-user"></div>
-        <div class="review-text"></div>
-      </div>
-      <div class="review">
-        <p>ceci est une review</p>
-        <div class="review-user"></div>
-        <div class="review-text"></div>
-      </div>
-    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 background" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)"></div>
+    <div class="col-xs-4 background" id="middle-one" style= "background-image: url(<%= asset_path 'Skate.jpg' %>)"><a><button type="button" class="button" id="browse">Bro's Board</button></a></div>
+    <div class="col-xs-4 background" style= "background-image: url(<%= asset_path 'Snow.jpg' %>)"></div>
   </div>
 </div>
 
