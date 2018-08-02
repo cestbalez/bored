@@ -1,15 +1,15 @@
 // Specific CSS for your home-page
-.background {
-  height: 650px;
+.container-fluid {
   padding: 0px;
 }
 
-.container {
-  width: 100%;
-}
-
-#middle-one {
-  position: relative;
+.trio-banner {
+  padding: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  img {
+    width: 100%;
+  }
 }
 
 
