@@ -1,6 +1,5 @@
 .container {
   width: 700px;
-  height: 80vh;
   border: solid 4px black;
   margin: 0px;
 }
@@ -14,15 +13,19 @@
 }
 
 #map {
-  width: 400px;
-  height: 80vh;
+  width: 530px;
+  height: 100vh;
   border: solid 4px black;
   margin-left: 25px;
   color: white;
+  position: sticky !important;
+  top: 0 !important;
 }
 
 .flex-container.cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 40px;
+  margin-left: 150px;
+  margin-right: 40px;
 }
