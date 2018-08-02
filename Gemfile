@@ -30,3 +30,4 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'validates_timeliness', '~> 5.0.0.alpha3'
