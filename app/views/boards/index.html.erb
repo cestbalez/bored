@@ -3,10 +3,11 @@
     <div class= "row">
       <% @boards.each do |board| %>
       <div class= "col-xs-6">
-        <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)"">
-         <div class= "card-title"> <%= board.title %> </div>
-         <div class= "card-price"></div>
-          </div>
+        <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)">
+          <div class= "card-title"><%= board.title %></div>
+          <div class= "card-avatar">user-avatar</div>
+          <div class= "card-price">5$/day</div>
+        </div>
       </div>
       <% end %>
     </div>
