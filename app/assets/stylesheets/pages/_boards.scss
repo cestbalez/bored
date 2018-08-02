@@ -1,0 +1,28 @@
+.container {
+  width: 700px;
+  height: 80vh;
+  border: solid 4px black;
+  margin: 0px;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  border: solid 4px black;
+  margin: 10px 0px;
+  color: white;
+}
+
+#map {
+  width: 400px;
+  height: 80vh;
+  border: solid 4px black;
+  margin-left: 25px;
+  color: white;
+}
+
+.flex-container.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
