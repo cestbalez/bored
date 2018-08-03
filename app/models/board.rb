@@ -5,7 +5,7 @@ class Board < ApplicationRecord
 
   validates :title, presence: true
   validates :category, presence: true, inclusion: { in: ['surf', 'skate', 'kite', 'snow', 'wake'] }
-  # validates :photo, presence: true
+  validates :photo, presence: true
   validates :location, presence: true
   validates :user_id, presence: true
 
