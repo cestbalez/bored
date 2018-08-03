@@ -8,4 +8,6 @@ class Board < ApplicationRecord
   validates :photo, presence: true
   validates :location, presence: true
   validates :user_id, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
