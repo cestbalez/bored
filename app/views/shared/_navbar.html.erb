@@ -4,7 +4,13 @@
   <h1 class="logo">Bored</h1>
   <% end %>
 
-  <%= link_to new_user_session_path do %>
-  <button type="button" class="button" id="login">Log in/ Sign up</button>
-  <% end %>
+  <button type="button" class="button" id="login" data-toggle="modal" data-target=".login-modal">Log in/ Sign up</button>
+</div>
+
+<div class="modal fade centered-modal login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <%= render 'devise/sessions/new', resource:User.new %>
+    </div>
+  </div>
 </div>
