@@ -1,15 +1,18 @@
-<div class="flex-container cards">
-  <div class= "container">
-    <div class= "row">
-      <% @boards.each do |board| %>
-      <div class= "col-xs-6">
-        <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)">
-          <div class= "card-title"><%= board.title %></div>
-          <div class= "card-avatar">user-avatar</div>
-          <div class= "card-price">5$/day</div>
+<div class="flex-container all">
+  <div class="flex-container boards">
+    <input class="search-bar" id="board_location"></input>
+    <div class= "container">
+      <div class= "row">
+        <% @boards.each do |board| %>
+        <div class= "col-xs-6">
+          <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)">
+            <div class= "card-title"><%= board.title %></div>
+            <div class= "card-avatar">user-avatar</div>
+            <div class= "card-price">5$/day</div>
+          </div>
         </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
   <div id="map" data-markers="<%= @markers.to_json %>">Map</div>
