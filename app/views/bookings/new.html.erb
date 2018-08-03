@@ -5,7 +5,6 @@
 <%= simple_form_for [ @board, @booking ] do |f| %>
   <%= f.input :start_date, as: :date, start_day: Date.today.day %>
   <%= f.input :end_date, as: :date, start_day: tomorrow.day %>
-  <%#= f.input :accepts, as: :boolean, checked_value: true, unchecked_value: false %>
   <%= f.button :submit %>
 <% end %>
 
