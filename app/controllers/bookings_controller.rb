@@ -7,7 +7,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.board = Board.find(params[:board_id])
     @booking.save
+    # redirect to User Dashboard booking page
+    # Implement also a if/else statement in case something goes wrong during booking
   end
 
   private
