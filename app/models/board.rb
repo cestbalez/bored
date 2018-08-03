@@ -4,7 +4,7 @@ class Board < ApplicationRecord
   has_many :bookings
 
   validates :title, presence: true
-  validates :category, presence: true, inclusion: { in: ['surf', 'skate', 'kite', 'snow', 'wake'] }
+  validates :category, presence: true, inclusion: { in: ['surf', 'skate', 'snow', 'body'] }
   validates :photo, presence: true
   validates :location, presence: true
   validates :user_id, presence: true
