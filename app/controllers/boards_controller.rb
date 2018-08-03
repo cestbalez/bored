@@ -4,6 +4,15 @@ class BoardsController < ApplicationController
 
   def index
     @boards = policy_scope(Board)
+
+    @boards = Board.where.not(latitude: nil, longitude: nil)
+
+    @markers = @boards.map do |board|
+      {
+        lat: board.latitude,
+        lng: board.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/boards/map_box", locals: { flat: flat }) }
+      }
   end
 
   def show
