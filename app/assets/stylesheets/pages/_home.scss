@@ -1,14 +1,47 @@
 // Specific CSS for your home-page
 .container-fluid {
   padding: 0px;
+  position: relative;
 }
-
+.row {
+  margin: 0px;
+}
 .trio-banner {
   padding: 0px;
-  background-size: cover;
+  background-size: inherit;
   background-repeat: no-repeat;
-  position: relative;
+  // position: relative;
   img {
     width: 100%;
   }
+}
+.container-explain {
+  color: #E8EEF2;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: -4%;
+  position: absolute;
+  width: 100% ;
+}
+img {
+  max-width: 100%;
+  height: auto
+}
+
+.row-explain {
+  width: 100%;
+}
+
+.shaka {
+  padding: 0;
+  text-align: center;
+}
+.money {
+  padding: 0;
+  text-align: center;
+}
+.friends {
+  padding: 0;
+  text-align: center;
 }
