@@ -1,6 +1,16 @@
 <div class="flex-container all">
   <div class="flex-container boards">
-    <input class="search-bar" id="board_location"></input>
+
+    <div class="search-bar">
+      <%= form_tag boards_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a Board"
+      %>
+      <% end %>
+    </div>
+
     <div class= "container">
       <div class= "row">
         <% @boards.each do |board| %>
@@ -14,6 +24,8 @@
         <% end %>
       </div>
     </div>
+
   </div>
+
   <div id="map" data-markers="<%= @markers.to_json %>">Map</div>
 </div>

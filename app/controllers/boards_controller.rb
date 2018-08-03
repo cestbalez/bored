@@ -3,17 +3,20 @@ class BoardsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @boards = policy_scope(Board)
-
-    @boards = Board.where.not(latitude: nil, longitude: nil)
-
-    @markers = @boards.map do |board|
-      {
-        lat: board.latitude,
-        lng: board.longitude#,
-        # infoWindow: { content: render_to_string(partial: "/boards/map_box", locals: { flat: flat }) }
-      }
+     @boards = policy_scope(Board)
+    if params[:query].present?
+      @boards = Board.select { |board| board.category == params[:query] }
+    else
+      @boards = Board.where.not(latitude: nil, longitude: nil)
     end
+
+      @markers = @boards.map do |board|
+        {
+          lat: board.latitude,
+          lng: board.longitude#,
+          # infoWindow: { content: render_to_string(partial: "/boards/map_box", locals: { flat: flat }) }
+        }
+      end
   end
 
   def show
