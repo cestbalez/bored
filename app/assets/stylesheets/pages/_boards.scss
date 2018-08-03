@@ -23,12 +23,24 @@
   top: 0 !important;
 }
 
-.flex-container.cards {
+.flex-container.all {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
   margin-left: 150px;
   margin-right: 40px;
+}
+
+.flex-container.boards {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  width: 700px;
+  height: 50px;
+  border: solid 4px black;
+  margin-bottom: 15px;
 }
 
 .card-title {
