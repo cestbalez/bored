@@ -4,13 +4,37 @@
   <h1 class="logo">Bored</h1>
   <% end %>
 
-  <button type="button" class="button" id="login" data-toggle="modal" data-target=".login-modal">Log in/ Sign up</button>
+  <% if user_signed_in? %>
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <% else %>
+  <button type="button" class="button" id="login" data-toggle="modal" data-target="#login-modal">Log in/ Sign up</button>
+  <% end %>
 </div>
 
-<div class="modal fade centered-modal login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade centered-modal login-modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <%= render 'devise/sessions/new', resource:User.new %>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
