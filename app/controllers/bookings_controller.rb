@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
   def new
+    @board = Board.find(params[:board_id])
     @booking = Booking.new
     authorize @booking
   end
