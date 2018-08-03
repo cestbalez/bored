@@ -1,0 +1,15 @@
+
+<div class="dashboard">
+  <p>Email: @user.email</p>
+  <p>Username: @user.username</p>
+  <h1>Boards</h1>
+  <% @user.boards.each do |board|  %>
+  <p> <%= board.title %> </p>
+  <% end %>
+
+  <h1>bookings</h1>
+  <% @user.bookings.each do |booking|  %>
+  <p> Start date: <%= booking.start_date %> </p>
+  <p> End date: <%= booking.end_date %> </p>
+  <% end %>
+</div>
