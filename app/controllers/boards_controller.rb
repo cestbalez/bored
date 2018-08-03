@@ -17,6 +17,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    @board = authorize Board.find(params[:id])
   end
 
   def new
