@@ -1,33 +1,36 @@
-<div class="flex-container all">
-  <div class="flex-container boards">
+<div class="wrapper">
 
-    <div class="search-bar">
-      <%= form_tag boards_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a Board"
-      %>
-      <% end %>
-    </div>
+  <div class="flex-container all">
+    <div class="flex-container boards">
 
-    <div class= "container">
-      <div class= "row">
-        <% @boards.each do |board| %>
-        <div class= "col-xs-6">
-          <%= link_to board_path(board) do %>
-          <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)">
-            <div class= "card-title"><%= board.title %></div>
-            <div class= "card-avatar">user-avatar</div>
-            <div class= "card-price">5$/day</div>
+      <div class= "container">
+        <div class="search-bar">
+        <%= form_tag boards_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a Board"
+        %>
+        <% end %>
+      </div>
+        <div class= "row">
+          <% @boards.each do |board| %>
+          <div class= "col-xs-6 col-md-4 card-wrapper">
+            <%= link_to board_path(board) do %>
+            <div class= "card" style= "background-image: url(<%= asset_path 'Surf.jpg' %>)">
+              <div class= "card-title"><%= board.title %></div>
+              <div class= "card-avatar">user-avatar</div>
+              <div class= "card-price">5$/day</div>
+            </div>
+            <% end %>
           </div>
           <% end %>
         </div>
-        <% end %>
       </div>
+
     </div>
 
+    <div id="map" data-markers="<%= @markers.to_json %>">Map</div>
   </div>
 
-  <div id="map" data-markers="<%= @markers.to_json %>">Map</div>
 </div>
