@@ -60,7 +60,7 @@ riders.each_with_index do |rider, i|
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
 
-  image = Cloudinary::Uploader.upload(rider, folder: "bored/heroku/rider")
+  image = Cloudinary::Uploader.upload(rider, folder: "bored/magnus/rider")
 
   user = User.new(
     email: Faker::Internet.email,
@@ -85,7 +85,7 @@ riders.each_with_index do |rider, i|
     end
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
 
-    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/heroku/#{board_type}")
+    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/magnus/#{board_type}")
 
     board = Board.new(
     title: Faker::Dog.meme_phrase.capitalize,
