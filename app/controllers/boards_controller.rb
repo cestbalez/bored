@@ -9,7 +9,6 @@ class BoardsController < ApplicationController
     else
       @boards = Board.where.not(latitude: nil, longitude: nil)
     end
-
       @markers = @boards.map do |board|
         {
           lat: board.latitude,
