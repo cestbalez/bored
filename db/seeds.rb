@@ -66,7 +66,7 @@ riders.each_with_index do |rider, i|
     email: Faker::Internet.email,
     username: usernames[i],
     password: 123456,
-    photo: image["public_id"],
+    photo: image["url"],
     password_confirmation: 123456
     )
 
@@ -90,13 +90,13 @@ riders.each_with_index do |rider, i|
     board = Board.new(
     title: Faker::Dog.meme_phrase.capitalize,
     category: board_type,
-    photo: image["public_id"],
+    photo: image["url"],
     location: Faker::Address.full_address,
     latitude: rand * (-8.56 - -8.65) + -8.65,
     longitude: rand * (115.26 - 115.15) + 115.15,
     user_id: user.id,
       )
-    board.write_attribute(:photo, image["public_id"])
+    board.write_attribute(:photo, image["url"])
     board.save
   end
 end
