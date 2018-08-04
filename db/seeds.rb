@@ -29,6 +29,8 @@ User.destroy_all
     category: ['surf', 'skate', 'snow', 'body'].sample,
     photo: "dsfasdf",
     location: Faker::Address.full_address,
+    latitude: rand * (-8.56 - -8.65) + -8.65,
+    longitude: rand * (115.26 - 115.15) + 115.15,
     user_id: user.id
       )
     board.write_attribute(:photo, "dsfasdf")
