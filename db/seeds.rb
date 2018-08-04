@@ -23,13 +23,13 @@ User.destroy_all
     password_confirmation: 123456
     )
 
-  rand(0..4).times do
+  rand(1..4).times do
     board = Board.create(
     title: Faker::Dog.meme_phrase.capitalize,
-    category: ['surf', 'skate', 'kite', 'snow', 'wake'].sample,
+    category: ['surf', 'skate', 'snow', 'body'].sample,
     photo: "dsfasdf",
     location: Faker::Address.full_address,
-    user_id: user.id,
+    user_id: user.id
       )
   end
 end
