@@ -24,13 +24,16 @@ User.destroy_all
     )
 
   rand(1..4).times do
-    board = Board.create(
+    board = Board.new(
     title: Faker::Dog.meme_phrase.capitalize,
     category: ['surf', 'skate', 'snow', 'body'].sample,
     photo: "dsfasdf",
     location: Faker::Address.full_address,
     user_id: user.id
       )
+    board.write_attribute(:photo, "dsfasdf")
+    board.save
+    sleep(0.5)
   end
 end
 
