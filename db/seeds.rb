@@ -20,6 +20,7 @@ User.destroy_all
     email: Faker::Internet.email,
     username: Faker::Internet.username,
     password: 123456,
+    location: Faker::Address.full_address,
     password_confirmation: 123456
     )
 
@@ -28,7 +29,6 @@ User.destroy_all
     title: Faker::Dog.meme_phrase.capitalize,
     category: ['surf', 'skate', 'snow', 'body'].sample,
     photo: "dsfasdf",
-    location: Faker::Address.full_address,
     user_id: user.id
       )
     board.write_attribute(:photo, "dsfasdf")
