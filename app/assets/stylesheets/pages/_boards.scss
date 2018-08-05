@@ -1,11 +1,11 @@
 .wrapper {
-  border: solid 4px black;
+  // border: solid 4px black;
   display: flex;
 }
 
 .container {
   width: 700px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin: 0px;
   flex: 1 1 auto;
 }
@@ -13,7 +13,7 @@
 .card {
   width: 330px;
   height: 500px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin: 25px 0px;
   color: white;
   position: relative;
@@ -23,7 +23,7 @@
 #map {
   width: 530px;
   height: 100vh;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-left: 25px;
   color: white;
   position: sticky !important;
@@ -52,7 +52,7 @@
 .search-bar {
   width: 700px;
   height: 50px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-bottom: 15px;
   // margin-left: 45px;
   margin: 0 auto;
