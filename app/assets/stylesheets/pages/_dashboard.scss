@@ -1,8 +1,6 @@
 .container {
-  width: 100%
-}
-
-.row {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .booking {
@@ -10,6 +8,8 @@
   height: 610px;
   background-color: #655C73;
   border: 2px solid #30C6FD;
+  margin-right: 15.5%;
+  margin-top: 5.3%;
 }
 
 .booking-container {
@@ -23,12 +23,16 @@
   height: 680px;
   background-color: #655C73;
   border: 2px solid #30C6FD;
+  h1 {
+    margin-top:18.3%;
+  }
 }
 
 .board-manager-container {
   border: 2px solid #fff;
   height: 504px;
   width: 510px;
+  // margin-top: 16%;
 }
 
 .board-manager-cards {
