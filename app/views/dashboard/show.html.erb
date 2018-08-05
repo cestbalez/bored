@@ -1,7 +1,7 @@
 
 <div class="dashboard">
-  <p>Email: @user.email</p>
-  <p>Username: @user.username</p>
+  <p>Email: <%= @user.email %></p>
+  <p>Username: <%= @user.username %></p>
   <h1>Boards</h1>
   <% @user.boards.each do |board|  %>
   <p> <%= board.title %> </p>
