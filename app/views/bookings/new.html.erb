@@ -1,12 +1,15 @@
 <h1>Book #username board</h1>
-
-<div class="booking-form">
-  <% tomorrow = Date.today + 1 %>
-  <%= simple_form_for [ @board, @booking ] do |f| %>
-    <%= f.input :start_date, as: :date, start_day: Date.today.day %>
-    <%= f.input :end_date, as: :date, start_day: tomorrow.day %>
-    <%= f.button :submit %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 booking-form">
+      <% tomorrow = Date.today + 1 %>
+      <%= simple_form_for [ @board, @booking ] do |f| %>
+        <%= f.input :start_date, as: :date, start_day: Date.today.day %>
+        <%= f.input :end_date, as: :date, start_day: tomorrow.day %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <!--  Start date can't be before today.
  End date can't be before today..
