@@ -1,15 +1,20 @@
 .container {
   width: 80%;
   margin: 0 auto;
+  color: #E8EEF2;
+  font-weight: bold;
+  text-align: center;
 }
 
 .booking {
   width: 550px;
   height: 610px;
   background-color: #655C73;
-  border: 2px solid #30C6FD;
+  border-left: 2px solid #30C6FD;
+  color: #E8EEF2;
   margin-right: 15.5%;
   margin-top: 5.3%;
+  text-align: center;
 }
 
 .booking-container {
@@ -20,19 +25,18 @@
 
 .board-manager {
   width: 550px;
-  height: 680px;
+  height: 610px;
   background-color: #655C73;
-  border: 2px solid #30C6FD;
-  h1 {
-    margin-top:18.3%;
-  }
+  border-left: 2px solid #30C6FD;
+  color: #E8EEF2;
+  margin-top: 5.3%;
+  text-align: center;
 }
 
 .board-manager-container {
   border: 2px solid #fff;
   height: 504px;
   width: 510px;
-  // margin-top: 16%;
 }
 
 .board-manager-cards {
@@ -45,6 +49,8 @@
   border: 2px solid #fff;
   height: 238.79px;
   width: 242.12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #847896;
 }
 
 .board-manager-status {
