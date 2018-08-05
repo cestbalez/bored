@@ -90,6 +90,7 @@ riders.each_with_index do |rider, i|
     board = Board.new(
     title: Faker::Dog.meme_phrase.capitalize,
     category: board_type,
+    price: rand(5..30)
     photo: image["url"],
     location: Faker::Address.full_address,
     latitude: rand * (-8.56 - -8.65) + -8.65,
