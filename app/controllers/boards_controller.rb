@@ -32,6 +32,7 @@ class BoardsController < ApplicationController
     authorize @board
     @board.user = current_user
     @board.save
+    redirect_to dashboard_show_path
   end
 
   def edit
@@ -55,7 +56,7 @@ class BoardsController < ApplicationController
   end
 
   def board_params
-    params.require(@board).permit(:title, :type, :photo, :location, :description)
+    params.require(:board).permit(:title, :category, :photo, :location, :description)
   end
 
 end
