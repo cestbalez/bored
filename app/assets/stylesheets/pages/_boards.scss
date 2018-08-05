@@ -74,9 +74,11 @@
 
 .card-avatar {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 5px;
+  border: 1px solid #30C6FD;
+  background-size: cover;
 }
