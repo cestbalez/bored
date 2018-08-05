@@ -1,16 +1,23 @@
+.wrapper {
+  border: solid 4px black;
+  display: flex;
+}
+
 .container {
   width: 700px;
   border: solid 4px black;
   margin: 0px;
+  flex: 1 1 auto;
 }
 
 .card {
-  width: 300px;
-  height: 250px;
+  width: 330px;
+  height: 500px;
   border: solid 4px black;
-  margin: 10px 0px;
+  margin: 25px 0px;
   color: white;
   position: relative;
+  background-size: cover;
 }
 
 #map {
@@ -21,13 +28,19 @@
   color: white;
   position: sticky !important;
   top: 0 !important;
+  flex: 0 0 auto;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .flex-container.all {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  margin-left: 150px;
+  margin-left: 25px;
   margin-right: 40px;
 }
 
@@ -41,6 +54,8 @@
   height: 50px;
   border: solid 4px black;
   margin-bottom: 15px;
+  // margin-left: 45px;
+  margin: 0 auto;
 }
 
 .card-title {
