@@ -1,11 +1,12 @@
-<h1>Book #username board</h1>
 <div class="container">
+<h1>Book #username board</h1>
   <div class="row">
     <div class="col-xs-4 booking-form">
-      <% tomorrow = Date.today + 1 %>
+      <% tomorrow = DateTime.tomorrow %>
       <%= simple_form_for [ @board, @booking ] do |f| %>
-        <%= f.input :start_date, as: :date, start_day: Date.today.day %>
-        <%= f.input :end_date, as: :date, start_day: tomorrow.day %>
+        <%= f.input :start_date, as: :date, start_day: Date.today.day, html5: true%>
+        <%= f.input :end_date, as: :date, start_day: tomorrow, html5: true %>
+        <p>Total price: <span id="total_booking_price"></span>$</p>
         <%= f.button :submit %>
       <% end %>
     </div>
@@ -15,3 +16,21 @@
  End date can't be before today..
  Add a case with calculated price depending on user date input
  -->
+
+<script>
+  let dailyPrice = <%= @board.price %>
+
+  function changeIf(){
+  start = document.querySelector('#booking_start_date').value
+  end = document.querySelector('#booking_end_date').value
+  totalDays = (new Date(end) - new Date(start)) / 86400000
+  calculatedPrice = totalDays * dailyPrice
+  console.log(calculatedPrice)
+ document.querySelector('#total_booking_price').innerText = calculatedPrice
+}
+
+  document.querySelector('#booking_end_date').addEventListener(('change'), changeIf)
+  document.querySelector('#booking_start_date').addEventListener(('change'), changeIf)
+
+</script>
+
