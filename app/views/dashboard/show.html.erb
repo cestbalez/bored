@@ -4,7 +4,7 @@
 
   <div class="booking-container">
     <h3 style="
-    text-align: center;">Your bookings</h3>
+    text-align: center; margin-top: 15px;">Your bookings</h3>
     <div class="booking-content">
       <% @my_bookings.each do |booking|%>
         <ul>
@@ -20,7 +20,7 @@
 
   <div class="booking-container">
     <h3 style="
-    text-align: center;">Boards manager</h3>
+    text-align: center; margin-top: 15px;">Boards manager</h3>
     <div class="booking-content">
       <div class="board-manager-cards">
         <% current_user.boards.each do |board| %>
@@ -28,10 +28,10 @@
             <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
             <ul>
               <div class="board-manager-status list-unstyled">
-                <p>Board status</p>
-                <li><%= board.category %></li>
-                <li><%= board.title %></li>
-                <li><%= board.location %></li>
+                <p style="text-align: center;"><strong>Board status</strong></p>
+                <li><strong>Type:</strong> <%= board.category %></li>
+                <li><strong>Title:</strong> <%= board.title %></li>
+                <li><strong>Location:</strong> <%= board.location %></li>
                 <li><%= board.availability %></li>
                 <li><%= board.availability %></li>
               </div>

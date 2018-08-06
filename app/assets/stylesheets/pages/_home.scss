@@ -24,10 +24,6 @@
   position: absolute;
   width: 100% ;
 }
-img {
-  max-width: 100%;
-  height: auto
-}
 
 .row-explain {
   width: 100%;
@@ -38,13 +34,23 @@ img {
   text-align: center;
   img {
     margin-right: 5%;
+    max-width: auto;
+    height: auto;
   }
 }
 .money {
   padding: 0;
   text-align: center;
+  img {
+    max-width: 100%;
+    height: auto
+  }
 }
 .friends {
   padding: 0;
   text-align: center;
+  img {
+    max-width: 100%;
+    height: auto
+  }
 }
