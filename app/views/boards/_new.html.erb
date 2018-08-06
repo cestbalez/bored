@@ -1,12 +1,14 @@
-<h1>Add a new item</h1>
+<div class="new-board-modal">
+  <h1>Add a new board</h1>
 
-<%= simple_form_for @board do |f| %>
-  <%= f.input :title %>
-  <%= f.input :category %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for @board do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
