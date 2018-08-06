@@ -3,7 +3,6 @@
   <div class="flex-container all">
     <div class="flex-container boards">
 
-      <div class= "container">
         <div class="search-bar">
           <%= form_tag boards_path, method: :get do %>
           <%= text_field_tag :query,
@@ -15,19 +14,20 @@
         </div>
         <div class= "row">
           <% @boards.each do |board| %>
-          <div class= "col-xs-6 col-md-4 card-wrapper">
+          <div class= "col-xs-12 col-md-6 col-lg-4 card-wrapper">
             <%= link_to board_path(board) do %>
             <div class= "card" style="background-image: url(<%= cl_image_path board.photo %>)">
-              <div class= "card-title"><%= board.title %></div>
-              <div class= "card-avatar" style="background-image: url(<%= cl_image_path board.user.photo %>)">
+              <div class="board-details">
+                <div class= "card-title"><%= board.title %></div>
+                <div class= "card-avatar" style="background-image: url(<%= cl_image_path board.user.photo %>)">
+                </div>
+                <div class= "card-price">5$/day</div>
               </div>
-              <div class= "card-price">5$/day</div>
             </div>
             <% end %>
           </div>
           <% end %>
         </div>
-      </div>
 
     </div>
 
