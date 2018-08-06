@@ -7,18 +7,16 @@
   <div class="booking-container">
     <h1>Your bookings</h1>
     <div class="booking-content">
+      <% @my_bookings.each do |booking|%>
       <div class="booking-card-body">
         <ul>
-          <li>Title of the board</li>
-          <li>price and start date end date</li>
+          <li><%= booking.user.username %></li>
+          <li><%= booking.board.title %></li>
+          <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
         </ul>
       </div>
-      <div class="booking-card-body">
-        <ul>
-          <li>Title of the board</li>
-          <li>price and start date end date</li>
-        </ul>
-      </div>
+      <% end %>
+
       <!-- A booking card contain a fetch title and user avatar -->
       <!-- We need to print calculated price -->
       <!-- We need to print date of rent -->
@@ -28,13 +26,25 @@
 
     </div>
   </div>
-  <div class="booking-container">
+  <div class="booking-container ">
     <h1>Boards manager</h1>
     <div class="booking-content">
       <div class="board-manager-cards">
         <% current_user.boards.each do |board| %>
-        <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
-        <div class="board-manager-status">Board status</div>
+        <div class= "card-board-container">
+          <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
+          <div class="board-manager-status">
+            <p>Board status</p>
+            <ul>
+              <li><%= board.category %></li>
+              <li><%= board.title %></li>
+              <li><%= board.location %></li>
+              <li><%= board.availability %></li>
+              <li><%= board.availability %></li>
+            </ul>
+          </div>
+
+        </div>
         <% end %>
       </div>
     </div>

@@ -7,7 +7,7 @@
 }
 
 .booking-card-body {
-  width: 30vw;
+  width: 100%;
   height: 115px;
   background-color: #847896;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -17,13 +17,20 @@
   transition: 0.3s;
 }
 
+
+.card-board-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
 .booking-container {
   // border: 2px solid #fff;
   // height: 504px;
   // width: 510px;
   background-color: #655C73;
   border: 1px solid white;
-
+  width: 40%;
 }
 
 .dashboard-container {
@@ -68,10 +75,16 @@
 
 .board-manager-picture {
   border: 2px solid #fff;
-  height: 250px;
+  max-height: 200px;
+  width: 30%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #847896;
+  img{
+    height: 100%
+  }
 }
+
+
 
 // .board-manager-status {
 //   border: 2px solid #fff;
