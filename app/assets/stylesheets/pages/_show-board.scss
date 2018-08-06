@@ -17,6 +17,11 @@
   justify-content: space-between;
 }
 
+.book-now {
+  display: flex;
+  justify-content: space-between;
+}
+
 .article-picture {
   height: 530px;
   width: 350px;
@@ -30,7 +35,7 @@
 .article {
   height: 530px;
   width: 580px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-right: 0px;
   color: white;
   padding: 25px;
@@ -62,6 +67,7 @@
   border: solid 4px black;
   color: white;
   border-bottom: transparent;
+  text-align: center;
 }
 
 .review {

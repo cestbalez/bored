@@ -6,14 +6,18 @@
       <div class="article-content">
       <h4><%= @board.title %></h4>
       <p><%= @board.description %></p>
+      <div class="book-now">
       <a data-toggle="modal" data-target="#booking-modal">Book now</a>
+      <p>$<%= @board.price %></p>
+      </div>
       </div>
     </div>
   </div>
 
   <div class="flex-container bottom">
 
-    <div class="reviews"><p>Reviews</p>
+    <div class="reviews">
+      <h3>Reviews</h3>
       <% @board.reviews.each do |review| %>
       <div class= "review">
         <p>ceci est une review</p>
