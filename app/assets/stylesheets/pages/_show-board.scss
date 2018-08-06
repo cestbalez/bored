@@ -22,7 +22,7 @@
   width: 350px;
   // border: solid 4px black;
   border-radius: 3px;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 4px 6px 0 0 rgba(0,0,0,0.1);
   color: white;
   background-size: cover;
 }
@@ -52,6 +52,9 @@
   margin-bottom: 20px;
 }
 
+.booking-button {
+  background-color: #b2b2b2;
+}
 
 .reviews {
   height: 400px;
