@@ -84,7 +84,7 @@ riders.each_with_index do |rider, i|
     board = Board.new(
     title: titles.sample,
     category: board_type,
-    price: rand(5..30)
+    price: rand(5..30),
     photo: image["url"],
     location: Faker::Address.full_address,
     description: "I’m renting out my beloved Burton board that I bought 2 years ago. It still in a really good shape and is only waiting to be shred in some good powder.",
