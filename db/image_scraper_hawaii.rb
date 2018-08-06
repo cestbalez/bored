@@ -3,7 +3,7 @@ require 'nokogiri'
 
 board_href = []
 
-PAGE = "https://www.hawaiisurf.com/bodyboard/planches/"
+PAGE = "https://www.hawaiisurf.com/snowboard/planches/"
 
 html_doc = Nokogiri.HTML(open(PAGE))
 
