@@ -2,11 +2,11 @@
   <div class="flex-container top">
     <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
       <p>Picture</p>
+    <%= link_to "Book now", new_board_booking_path(@board) %>
     </div>
     <div class="article">
       <p>Burton 165cm prelude edition</p>
     </div>
-    <%= link_to "Book now", new_board_booking_path(@board) %>
   </div>
 
   <div class="flex-container bottom">

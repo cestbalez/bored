@@ -14,19 +14,19 @@
 .flex-container.bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .article-picture {
-  height: 350px;
+  height: 500px;
   width: 350px;
   border: solid 4px black;
   margin-right: 30px;
   color: white;
+  background-size: cover;
 }
 
 .article {
-  height: 350px;
+  height: 500px;
   width: 600px;
   border: solid 4px black;
   margin-right: 0px;
@@ -35,7 +35,7 @@
 
 .specifics {
   height: 200px;
-  width: 250px;
+  width: 350px;
   border: solid 3px black;
   bottom: 30px;
   left: 75px;
