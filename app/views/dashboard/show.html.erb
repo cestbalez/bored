@@ -19,13 +19,23 @@
       <div class="board-manager-container">
         <div class="board-manager-cards">
           <div class="board-manager-picture">Board photo</div>
-          <div class="board-manager-status">Board status</div>
+          <div class="board-manager-status">
+            Board status
+            <%= form_with(model: @board) do |form| %>
+              <%= form.check_box :availability %>
+              <%= form.button :submit %>
+            <% end %>
+          </div>
         </div>
       </div>
       <%= link_to "Add a new board", new_board_path %>
     </div>
   </div>
 </div>
+
+<!-- <form>
+  <input type="checkbox" id="availability" onclick="if(this.checked){myFunction()}">
+</form> -->
 
 
 <!-- <div class="dashboard">
@@ -43,3 +53,4 @@
   <%# end %>
 </div>
 
+<script>
