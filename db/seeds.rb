@@ -69,7 +69,7 @@ CSV.foreach("#{Rails.root}/db/bodyboards.csv") { |row| body_titles = row }
 # Extracting usernames from filenames
 
 usernames = riders.map do |rider|
-    new_rider = rider.gsub("/home/balez/code/cestbalez/bored/app/assets/images/riders/", '')
+    new_rider = rider.gsub("#{Rails.root}/app/assets/images/riders/", '')
     new_rider.gsub('.jpg', '')
 end
 
