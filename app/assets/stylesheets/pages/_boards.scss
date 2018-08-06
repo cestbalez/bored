@@ -1,19 +1,19 @@
 .wrapper {
-  border: solid 4px black;
+  // border: solid 4px black;
   display: flex;
 }
 
 .container {
   width: 700px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin: 0px;
   flex: 1 1 auto;
 }
 
 .card {
-  width: 300px;
+  width: 330px;
   height: 500px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin: 25px 0px;
   color: white;
   position: relative;
@@ -23,7 +23,7 @@
 #map {
   width: 530px;
   height: 100vh;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-left: 25px;
   color: white;
   position: sticky !important;
@@ -52,9 +52,10 @@
 .search-bar {
   width: 700px;
   height: 50px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-bottom: 15px;
-  margin-left: 45px
+  // margin-left: 45px;
+  margin: 0 auto;
 }
 
 .card-title {
@@ -73,9 +74,11 @@
 
 .card-avatar {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 5px;
+  border: 1px solid #30C6FD;
+  background-size: cover;
 }

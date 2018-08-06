@@ -27,6 +27,15 @@
   margin-right: 49px;
 }
 
+.modal-content {
+  background: linear-gradient( #5B6065 0%, #37393A 58.01%) no-repeat;
+  color: #E8EEF2;
+}
+
+.modal-content .form-actions {
+  color: #37393A;
+}
+
 // /* Logo */
 // .navbar-wagon-brand img {
 //   height: 50px;
@@ -34,9 +43,10 @@
 
 // /* User Avatar */
 .navbar-bored .avatar {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
+  border: 1px solid #30C6FD;
 }
 
 // /* Right section */
