@@ -13,21 +13,23 @@
 
   <div class="flex-container bottom">
 
-    <div class="specifics">
-      specifics
-    </div>
-
     <div class="reviews"><p>Reviews</p>
+      <% @board.reviews.each do |review| %>
       <div class= "review">
         <p>ceci est une review</p>
-        <div class="review-user"></div>
-        <div class="review-text"></div>
+        <div class="review-user">
+          <div class= "card-avatar" style="background-image: url(<%= cl_image_path review.user.photo %>)">
+          <h3><%= review.user.username %></h3>
+          <div id="date-review">
+            <% months = [January, February, March, April, May, June, July, August, September, October, November, December] %>
+            <%= months[review.created_at.month + 1] %> <%= review.created_at.year %>
+          </div>
+        </div>
+        <div class="review-text">
+          <%= review.content %>
+        </div>
       </div>
-      <div class="review">
-        <p>ceci est une review</p>
-        <div class="review-user"></div>
-        <div class="review-text"></div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

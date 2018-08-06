@@ -6,7 +6,7 @@ class BoardsController < ApplicationController
      @boards = policy_scope(Board)
 
     if params[:query].present?
-      @boards = Board.where("category ILIKE ?", "%#{params[:query]}%", availability: true)
+      @boards = Board.where("category ILIKE ?", "%#{params[:query]}%")
     else
       @boards = Board.where.not(latitude: nil, longitude: nil)
     end
