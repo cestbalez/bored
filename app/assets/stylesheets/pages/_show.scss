@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
+  justify-content: space-between;
 }
 
 .flex-container.bottom {
@@ -20,14 +21,13 @@
   height: 500px;
   width: 350px;
   border: solid 4px black;
-  margin-right: 30px;
   color: white;
   background-size: cover;
 }
 
 .article {
   height: 500px;
-  width: 600px;
+  width: 580px;
   border: solid 4px black;
   margin-right: 0px;
   color: white;
