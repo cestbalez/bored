@@ -5,8 +5,16 @@
 }
 
 .dashboard-container {
+  display: flex;
+  justify-content: space-around;
   width: 80%;
   margin: 0 auto;
+  margin-top: 50px;
+}
+
+.booking-content {
+  border-top: 3px solid #30C6FD;
+  padding-top: 10px;
 }
 
 .booking-card-body {
@@ -23,7 +31,8 @@
 .card-board-container {
   display: flex;
   justify-content: space-around;
-
+  width: 80%;
+  margin: 0 auto;
 }
 
 .booking-container {
@@ -32,50 +41,12 @@
   color: #E8EEF2;
 }
 
-.dashboard-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.booking-content {
-  border-top: 3px solid #30C6FD;
-  padding-top: 10px;
-}
-
-
-// .board-manager {
-//   width: 550px;
-//   // height: 610px;
-//   background-color: #655C73;
-//   border-left: 2px solid #30C6FD;
-//   color: #E8EEF2;
-//   margin-top: 5.3%;
-//   text-align: center;
-// }
-
-// .board-manager-container {
-//   border: 2px solid #fff;
-//   // height: 504px;
-//   width: 510px;
-// }
-
-// .board-manager-cards {
-//   border: 2px solid #fff;
-//   width: 510px;
-// }
-
 .board-manager-picture {
-  border: 2px solid #fff;
-  max-height: 200px;
-  width: 30%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #847896;
   img{
-    height: 100%
+    max-width: 65%;
   }
 }
-
-
 
 // .board-manager-status {
 //   border: 2px solid #fff;
