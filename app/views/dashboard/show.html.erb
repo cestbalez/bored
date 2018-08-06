@@ -1,15 +1,32 @@
-
-<div class="dashboard">
-  <p>Email: <%= @user.email %></p>
-  <p>Username: <%= @user.username %></p>
-  <h1>Boards</h1>
-  <% @user.boards.each do |board|  %>
-  <p> <%= board.title %> </p>
-  <% end %>
-
-  <h1>bookings</h1>
-  <% @user.bookings.each do |booking|  %>
-  <p> Start date: <%= booking.start_date %> </p>
-  <p> End date: <%= booking.end_date %> </p>
-  <% end %>
+<div class="container">
+  <h1>Welcome to your dashboard #username</h1>
+  <div class="row">
+    <div class="booking">
+      <h1>Your bookings</h1>
+      <div class="booking-container">
+        <div class="booking-card"></div>
+        <!-- We have to design the booking card, it lives in the components forlder already -->
+      </div>
+    </div>
+    <div class="board-manager">
+      <h1>Boards manager</h1>
+      <div class="board-manager-container">
+        <div class="board-manager-cards">
+          <div class="board-manager-picture">Board photo</div>
+          <div class="board-manager-status">Board photo</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
