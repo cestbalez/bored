@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @board = Board.find(params[:board_id])
     @booking = Booking.new(booking_params)
     @booking.board = @board
+    @booking.user = current_user
     @booking.save
     redirect_to dashboard_show_url
     authorize @booking
