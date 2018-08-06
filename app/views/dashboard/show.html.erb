@@ -1,50 +1,43 @@
 <h1 class="title-dashboard">Welcome to your dashboard, <%= current_user.username %></h1>
 
-
 <div class="dashboard-container">
 
-
   <div class="booking-container">
-    <h1>Your bookings</h1>
+    <h3>Your bookings</h3>
+
     <div class="booking-content">
       <% @my_bookings.each do |booking|%>
-      <div class="booking-card-body">
         <ul>
-          <li><%= booking.user.username %></li>
-          <li><%= booking.board.title %></li>
-          <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
+          <div class="booking-card-body list-unstyled">
+            <li><%= booking.user.username %></li>
+            <li><%= booking.board.title %></li>
+            <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
+          </div>
         </ul>
-      </div>
       <% end %>
-
       <!-- A booking card contain a fetch title and user avatar -->
       <!-- We need to print calculated price -->
       <!-- We need to print date of rent -->
-
-
-      <!-- We need to print date of booking -->
-
     </div>
   </div>
   <div class="booking-container ">
-    <h1>Boards manager</h1>
+    <h3>Boards manager</h3>
     <div class="booking-content">
       <div class="board-manager-cards">
         <% current_user.boards.each do |board| %>
-        <div class= "card-board-container">
-          <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
-          <div class="board-manager-status">
-            <p>Board status</p>
+          <div class= "card-board-container">
+            <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
             <ul>
-              <li><%= board.category %></li>
-              <li><%= board.title %></li>
-              <li><%= board.location %></li>
-              <li><%= board.availability %></li>
-              <li><%= board.availability %></li>
+              <div class="board-manager-status list-unstyled">
+                <p>Board status</p>
+                <li><%= board.category %></li>
+                <li><%= board.title %></li>
+                <li><%= board.location %></li>
+                <li><%= board.availability %></li>
+                <li><%= board.availability %></li>
+              </div>
             </ul>
           </div>
-
-        </div>
         <% end %>
       </div>
     </div>
