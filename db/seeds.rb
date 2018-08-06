@@ -1,44 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first
-
-
-#   Character.create(name: 'Luke', movie: movies.first)
-# require 'faker'
-
-# Booking.destroy_all
-# Board.destroy_all
-# User.destroy_all
-
-# 10.times do
-
-#   user = User.create(
-#     email: Faker::Internet.email,
-#     username: Faker::Internet.username,
-#     password: 123456,
-#     password_confirmation: 123456
-#     )
-
-#   rand(1..4).times do
-#     board = Board.new(
-#     title: Faker::Dog.meme_phrase.capitalize,
-#     category: ['surf', 'skate', 'snow', 'body'].sample,
-#     photo: "dsfasdf",
-#     location: Faker::Address.full_address,
-#     latitude: rand * (-8.56 - -8.65) + -8.65,
-#     longitude: rand * (115.26 - 115.15) + 115.15,
-#     user_id: user.id
-#       )
-#     board.write_attribute(:photo, "dsfasdf")
-#     board.save
-#     sleep(0.5)
-#   end
-# end
-
 require 'faker'
 
 Booking.destroy_all
@@ -69,15 +28,20 @@ CSV.foreach("#{Rails.root}/db/bodyboards.csv") { |row| body_titles = row }
 # Extracting usernames from filenames
 
 usernames = riders.map do |rider|
-    new_rider = rider.gsub("/home/balez/code/cestbalez/bored/app/assets/images/riders/", '')
+    new_rider = rider.gsub("#{Rails.root}/app/assets/images/riders/", '')
     new_rider.gsub('.jpg', '')
 end
 
+# Looping through each user/rider
+
 riders.each_with_index do |rider, i|
 
-# !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
+# Uploading user/rider photo to cloudinary
 
+# !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
   image = Cloudinary::Uploader.upload(rider, folder: "bored/magnus/rider")
+
+# Creating a user instance
 
   user = User.new(
     email: Faker::Internet.email,
@@ -89,7 +53,12 @@ riders.each_with_index do |rider, i|
 
   user.save
 
-  rand(1..4).times do
+# Looping through a random amount of boards per user
+
+  rand(1..5).times do
+
+# Setting type of board and fetching filepath to board image from array
+
     board_type = ['surf', 'skate', 'body', 'snow'].sample
     if board_type == 'surf'
       category_inst = surf.sample
@@ -104,9 +73,13 @@ riders.each_with_index do |rider, i|
       category_inst = snow.sample
       titles = snow_titles
     end
-# !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
 
+# Uploading board image to cloudinary
+
+# !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
     image = Cloudinary::Uploader.upload(category_inst, folder: "bored/magnus/#{board_type}")
+
+# Creating new board
 
     board = Board.new(
     title: titles.sample,
