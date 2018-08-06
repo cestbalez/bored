@@ -42,9 +42,16 @@
     </div>
     <%= link_to "Add board", new_board_path %>
   </div>
-
+  <a data-toggle="modal" data-target="#new-board-modal">Add Board with a modal!</a>
 </div>
 
+<div class="modal fade centered-modal login-modal" id="new-board-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <%= render 'boards/new', board:Board.new %>
+    </div>
+  </div>
+</div>
 <!-- <form>
   <input type="checkbox" id="availability" onclick="if(this.checked){myFunction()}">
 </form> -->
