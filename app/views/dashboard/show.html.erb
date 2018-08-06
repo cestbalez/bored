@@ -1,9 +1,9 @@
 <div class="container">
 
-  <h1 class="title-dashboard">Welcome to your dashboard <%= current_user.username %></h1>
+  <h1 class="title-dashboard"><%= current_user.username %></h1>
 
   <div class="row">
-    <div class="booking col-xs-12 col-sm-6">
+    <div class="booking">
       <h1>Your bookings</h1>
       <div class="booking-container">
         <%# @bookings.each do |booking| %>
@@ -14,21 +14,18 @@
         <!-- We need to print date of booking -->
       </div>
     </div>
-    <div class="board-manager col-xs-12 col-sm-6">
+    <div class="board-manager">
       <h1>Boards manager</h1>
       <div class="board-manager-container">
         <div class="board-manager-cards">
-          <div class="board-manager-picture">Board photo</div>
-          <div class="board-manager-status">
-            Board status
-            <%= form_with(model: @board) do |form| %>
-              <%= form.check_box :availability %>
-              <%= form.button :submit %>
-            <% end %>
-          </div>
+          <% current_user.boards.each do |board| %>
+            <div class="row">
+              <div class="board-manager-picture col-xs-6"><%= cl_image_tag board.photo %></div>
+              <div class="board-manager-status col-xs-6">Board status</div>
+            </div>
+          <% end %>
         </div>
       </div>
-      <%= link_to "Add a new board", new_board_path %>
     </div>
   </div>
 </div>
@@ -38,19 +35,8 @@
 </form> -->
 
 
-<!-- <div class="dashboard">
-  <p>Email: @user.email</p>
-  <p>Username: @user.username</p>
-  <h1>Boards</h1>
-  <%# @user.boards.each do |board|  %>
-  <p> <%#= board.title %> </p>
-  <%# end %>
 
-  <h1>bookings</h1>
-  <%# @user.bookings.each do |booking|  %>
-  <p> Start date: <%#= booking.start_date %> </p>
-  <p> End date: <%#= booking.end_date %> </p>
-  <%# end %>
-</div>
 
-<script>
+
+
+
