@@ -21,7 +21,7 @@
                 <div class= "card-title"><%= board.title %></div>
                 <div class= "card-avatar" style="background-image: url(<%= cl_image_path board.user.photo %>)">
                 </div>
-                <div class= "card-price"><%= board.price %>/day</div>
+                <div class= "card-price">$<%= board.price %>/day</div>
               </div>
             </div>
             <% end %>
