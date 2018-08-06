@@ -12,7 +12,7 @@
 
 .card {
   width: 280px;
-  height: 500px;
+  height: 420px;
   // border: solid 4px black;
   margin: 25px 0px;
   color: white;
@@ -30,6 +30,10 @@
   border-bottom: 3px solid #30C6FD;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px 3px 0px 0px;
+}
+
+.div-sizer {
+  visibility: hidden;
 }
 
 #map {
