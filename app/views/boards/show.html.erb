@@ -3,8 +3,11 @@
     <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
     </div>
     <div class="article">
-      <p><%= @board.title %></p>
+      <div class="article-content">
+      <h4><%= @board.title %></h4>
+      <p><%= @board.description %></p>
       <%= link_to "Book now", new_board_booking_path(@board) %>
+      </div>
     </div>
   </div>
 
