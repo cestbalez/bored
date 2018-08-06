@@ -9,4 +9,12 @@ class Booking < ApplicationRecord
 
   validates_date :start_date, on: :create, on_or_after: :today
   validates_date :end_date, on: :create, after: :start_date
+
+  # private
+  # def reservation_dates_must_makes_sense
+  #   if end_date <= start_date
+  #     errors.add (:start_date, 'has to be before end date')
+  #   end
+  # end
 end
+
