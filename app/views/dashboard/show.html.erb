@@ -18,8 +18,10 @@
       <h1>Boards manager</h1>
       <div class="board-manager-container">
         <div class="board-manager-cards">
-          <div class="board-manager-picture">Board photo</div>
-          <div class="board-manager-status">Board status</div>
+        <div class="row">
+          <div class="board-manager-picture col-xs-6">Board photo</div>
+          <div class="board-manager-status col-xs-6">Board status</div>
+        </div>
         </div>
       </div>
       <%= link_to "Add a new board", new_board_path %>
