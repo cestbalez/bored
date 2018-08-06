@@ -26,7 +26,7 @@
 .board-details {
   width: auto;
   height: 76px;
-  background-color: #37393A;
+  background-color: rgba(55,57,58,0.9);
   border-bottom: 3px solid #30C6FD;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px 3px 0px 0px;
@@ -46,6 +46,10 @@
 .card-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.card-wrapper a:hover {
+  opacity: 0.5;
 }
 
 .flex-container.all {
