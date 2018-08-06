@@ -28,10 +28,10 @@
             <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
             <ul>
               <div class="board-manager-status list-unstyled">
-                <p>Board status</p>
-                <li><%= board.category %></li>
-                <li><%= board.title %></li>
-                <li><%= board.location %></li>
+                <p style="text-align: center;"><strong>Board status</strong></p>
+                <li><strong>Type:</strong> <%= board.category %></li>
+                <li><strong>Title:</strong> <%= board.title %></li>
+                <li><strong>Location:</strong> <%= board.location %></li>
                 <li><%= board.availability %></li>
                 <li><%= board.availability %></li>
               </div>
