@@ -39,7 +39,7 @@ riders.each_with_index do |rider, i|
 # Uploading user/rider photo to cloudinary
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
-  image = Cloudinary::Uploader.upload(rider, folder: "bored/magnus/rider")
+  image = Cloudinary::Uploader.upload(rider, folder: "bored/ridershow/rider")
 
 # Creating a user instance
 
@@ -77,7 +77,7 @@ riders.each_with_index do |rider, i|
 # Uploading board image to cloudinary
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
-    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/magnus/#{board_type}")
+    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/ridershow/#{board_type}")
 
 # Creating new board
 
