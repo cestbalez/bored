@@ -1,9 +1,9 @@
 <div class="container">
-<h1>Book <%= @board.user.username %> board</h1>
+<h1>Book <%= @board.user.username %>'s board</h1>
   <div class="row">
     <div class="booking-form">
       <% tomorrow = DateTime.tomorrow %>
-      <%= simple_form_for [ @board, @booking ] do |f| %>
+      <%= simple_form_for [ board, booking ] do |f| %>
         <%= f.input :start_date, as: :date, start_day: Date.today.day, html5: true%>
         <%= f.input :end_date, as: :date, start_day: tomorrow, html5: true %>
         <p>Total price: <span id="total_booking_price"></span>$</p>

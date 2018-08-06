@@ -6,7 +6,7 @@
       <div class="article-content">
       <h4><%= @board.title %></h4>
       <p><%= @board.description %></p>
-      <%= link_to "Book now", new_board_booking_path(@board) %>
+      <a data-toggle="modal" data-target="#booking-modal">Book now</a>
       </div>
     </div>
   </div>
@@ -28,6 +28,14 @@
         <div class="review-user"></div>
         <div class="review-text"></div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade centered-modal login-modal" id="booking-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <%= render 'bookings/new', board:Board.find(params[:id]), booking:Booking.new %>
     </div>
   </div>
 </div>
