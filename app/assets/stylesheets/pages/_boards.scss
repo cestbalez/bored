@@ -1,11 +1,9 @@
 .wrapper {
-  // border: solid 4px black;
   display: flex;
 }
 
 .container {
   width: 700px;
-  // border: solid 4px black;
   margin: 0px;
   flex: 1 1 auto;
 }
@@ -13,7 +11,6 @@
 .card {
   width: 280px;
   height: 420px;
-  // border: solid 4px black;
   margin: 25px 0px;
   color: white;
   position: relative;
@@ -72,9 +69,7 @@
 .search-bar {
   max-width: 80vw;
   height: 50px;
-  // border: solid 4px black;
   margin-bottom: 15px;
-  // margin-left: 45px;
   margin: 3vh;
 }
 
