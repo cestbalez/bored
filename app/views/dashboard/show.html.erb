@@ -2,10 +2,10 @@
 
 <div class="dashboard-container">
 
-  <div class="booking-container">
+  <div class="booking-container booking">
     <h3 style="
     text-align: center; margin-top: 15px;">Your bookings</h3>
-    <div class="booking-content">
+    <div class="booking-content booking">
       <% @my_bookings.each do |booking|%>
         <ul>
           <div class="booking-card-body list-unstyled">
@@ -19,10 +19,10 @@
     </div>
   </div>
 
-  <div class="booking-container">
+  <div class="booking-container boards">
     <h3 style="
     text-align: center; margin-top: 15px;">Boards manager</h3>
-    <div class="booking-content">
+    <div class="booking-content boards">
       <!-- <div class="board-manager-cards"> -->
         <% current_user.boards.each do |board| %>
           <div class= "card-board-container">

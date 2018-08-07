@@ -10,11 +10,7 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
-}
-
-.booking-content {
-  border-top: 3px solid #30C6FD;
-  padding-top: 10px;
+  margin-bottom: 50px;
 }
 
 .booking-card-body {
@@ -36,10 +32,27 @@
   margin: 25px auto;
 }
 
-.booking-container {
+.booking-container.booking {
   background-color: #655C73;
   width: 40%;
   color: #E8EEF2;
+}
+
+.booking-content.booking {
+  border-top: 3px solid #30C6FD;
+  padding-top: 10px;
+}
+
+.booking-container.boards {
+  background-color: #655C73;
+  width: 40%;
+  color: #E8EEF2;
+  height: 100%;
+}
+
+.booking-content.boards {
+  border-top: 3px solid #30C6FD;
+  padding-top: 10px;
 }
 
 .board-manager-picture {
