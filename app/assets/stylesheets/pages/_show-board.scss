@@ -129,3 +129,26 @@
   padding: 10px 20px;
   border-left: 3px solid #30C6FD;
 }
+
+.price-description {
+  margin-left: 420px;
+  margin-top: -28px;
+}
+
+.book-now {
+  width: 130px;
+  height: 30px;
+  background: #5B6065;
+  margin-top: 10px;
+  border-radius: 45px;
+  box-shadow: 1px 7px 20px rgba(0, 0, 0, 0.55);
+  text-transform: uppercase;
+  span {
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+}
+
+.book-now:hover {
+  color: #30C6FD;
+}

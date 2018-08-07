@@ -7,9 +7,9 @@
         <h4><%= @board.title %></h4>
         <p><%= @board.description %></p>
         <div class="book-now">
-          <a data-toggle="modal" data-target="#booking-modal">Book now</a>
-          <p>$<%= @board.price %></p>
+          <span data-toggle="modal" data-target="#booking-modal">Book now</span>
         </div>
+        <div class="price-description"><p>$<%= @board.price %>/day</p></div>
       </div>
     </div>
   </div>
