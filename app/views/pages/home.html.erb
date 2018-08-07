@@ -1,31 +1,33 @@
-<div class="container-fluid">
+<div class="home-wrapper" style="min-height: 110vh;">
+  <div class="container-fluid">
 
-  <div class="row">
-    <div class="col-xs-4 trio-banner">
-      <%= image_tag("Surf.jpg", :alt => "surfer") %>
-    </div>
-    <div class="col-xs-4 trio-banner">
-      <%= image_tag("Skate.jpg", :alt => "skater") %>
-      <%= link_to "Bro's boards", boards_path, class:"button btn-browse home"%>
-    </div>
-    <div class="col-xs-4 trio-banner">
-      <%= image_tag("Snow.jpg", :alt => "snowboarder") %>
+    <div class="row">
+      <div class="col-xs-4 trio-banner">
+        <%= image_tag("Surf.jpg", :alt => "surfer") %>
+      </div>
+      <div class="col-xs-4 trio-banner">
+        <%= image_tag("Skate.jpg", :alt => "skater") %>
+        <%= link_to "Bro's boards", boards_path, class:"button btn-browse home"%>
+      </div>
+      <div class="col-xs-4 trio-banner">
+        <%= image_tag("Snow.jpg", :alt => "snowboarder") %>
+      </div>
     </div>
   </div>
-</div>
-<div class="container-explain">
-  <div class="row-explain">
-    <div class="col-xs-4 shaka">
-      <%= image_tag("shaka.png", :alt => "shaka") %>
-      <h2>Share your board</h2>
-    </div>
-    <div class="col-xs-4 money">
-      <%= image_tag("money.png", :alt => "money") %>
-      <h2>Make money</h2>
-    </div>
-    <div class="col-xs-4 friends">
-      <%= image_tag("friends.png", :alt => "friends") %>
-      <h2>Make new friends</h2>
+  <div class="container-explain">
+    <div class="row-explain">
+      <div class="col-xs-4 shaka">
+        <%= image_tag("shaka.png", :alt => "shaka") %>
+        <h2>Share your board</h2>
+      </div>
+      <div class="col-xs-4 money">
+        <%= image_tag("money.png", :alt => "money") %>
+        <h2>Make money</h2>
+      </div>
+      <div class="col-xs-4 friends">
+        <%= image_tag("friends.png", :alt => "friends") %>
+        <h2>Make new friends</h2>
+      </div>
     </div>
   </div>
 </div>
