@@ -39,7 +39,7 @@ riders.each_with_index do |rider, i|
 # Uploading user/rider photo to cloudinary
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
-<<
+
   image = Cloudinary::Uploader.upload(rider, folder: "bored/heroku/rider")
 
 # Creating a user instance
