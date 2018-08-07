@@ -1,5 +1,6 @@
 require 'faker'
 
+Review.destroy_all
 Booking.destroy_all
 Board.destroy_all
 User.destroy_all
@@ -39,11 +40,8 @@ riders.each_with_index do |rider, i|
 # Uploading user/rider photo to cloudinary
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
-<<<<<<< HEAD
-  image = Cloudinary::Uploader.upload(rider, folder: "bored/ridershow/rider")
-=======
-  image = Cloudinary::Uploader.upload(rider, folder: "bored/graham/rider")
->>>>>>> ac1c9806b78f53e1d550b8994954381ca43c4c3e
+
+  image = Cloudinary::Uploader.upload(rider, folder: "bored/magnus/rider")
 
 # Creating a user instance
 
@@ -81,11 +79,8 @@ riders.each_with_index do |rider, i|
 # Uploading board image to cloudinary
 
 # !!!!!! CHANGE MY NAME WITH YOURS IN FOLDER PATH BELOW !!!!!!!!
-<<<<<<< HEAD
-    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/ridershow/#{board_type}")
-=======
-    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/graham/#{board_type}")
->>>>>>> ac1c9806b78f53e1d550b8994954381ca43c4c3e
+
+    image = Cloudinary::Uploader.upload(category_inst, folder: "bored/magnus/#{board_type}")
 
 # Creating new board
 
@@ -93,7 +88,7 @@ riders.each_with_index do |rider, i|
     title: titles.sample,
     category: board_type,
     price: rand(5..30),
-    photo: image["url"],
+    remote_photo_url: image["url"],
     location: Faker::Address.full_address,
     description: "I’m renting out my beloved Burton board that I bought 2 years ago. It still in a really good shape and is only waiting to be shred in some good powder.",
     latitude: rand * (-8.56 - -8.65) + -8.65,

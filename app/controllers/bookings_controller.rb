@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.save
     authorize @booking
-    redirect_to board_path
+    redirect_to dashboard_show_path
 
     # Implement also a if/else statement in case something goes wrong during booking
   end
