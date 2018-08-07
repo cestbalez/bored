@@ -43,6 +43,16 @@ class BoardsController < ApplicationController
   def update
     authorize @board
     @board.update(board_params)
+      respond_to do |format|
+        format.html { redirect_to dashboard_show_path }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render 'dashboard/show' }
+        format.js  # <-- idem
+      end
+    end
   end
 
   def destroy
