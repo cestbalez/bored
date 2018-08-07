@@ -9,7 +9,7 @@
       <% @my_bookings.each do |booking|%>
         <ul>
           <div class="booking-card-body list-unstyled">
-            <li><%= booking.user.username %></li>
+            <li><%= booking.board.user.username %></li>
             <li><%= booking.board.title %></li>
             <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
             <li><%= link_to "Add a review", new_board_review_path(booking.board) %></li>
