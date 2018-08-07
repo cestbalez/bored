@@ -19,7 +19,8 @@
     <div class="reviews">
       <h3>Reviews</h3>
       <% @board.reviews.each do |review| %>
-      <div class= "review">
+      <!-- <div class= "review"> -->
+        <div class= "flex-container review">
         <div class="review-user">
           <div class= "card-avatar-review" style="background-image: url(<%= cl_image_path review.user.photo %>)"></div>
           <h3 class="review-username"><%= review.user.username %></h3>
@@ -31,7 +32,8 @@
         <div class="review-text">
           <%= review.content %>
         </div>
-      </div>
+      <!-- </div> -->
+    </div>
     <% end %>
   </div>
 

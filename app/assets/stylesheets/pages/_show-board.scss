@@ -1,6 +1,6 @@
 .container.main {
   width: 980px;
-  height: 1000px;
+  // height: 1000px;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -50,7 +50,6 @@
 }
 
 .reviews {
-  height: 400px;
   width: 100%;
   border-bottom: transparent;
   text-align: left;
@@ -59,7 +58,7 @@
 
 .review {
   border-left: solid 4px #30C6FD;
-  height: 130px;
+  min-height: 130px;
   width: 100%;
   color: #E8EEF2;
   margin: 0px;
@@ -76,18 +75,19 @@
 .date-review {
   margin-top: -37px;
   margin-left: 195px;
-  position: absolute;
-  top: 71px;
-  left: -114px;
+  // position: absolute;
+  // top: 71px;
+  // left: -114px;
   font-size: 15px;
 }
 
 .review-text {
   margin-top: 10px;
-  position: absolute;
-  top: 50px;
-  left: 16px;
+  // position: absolute;
+  // top: 50px;
+  // left: 16px;
   font-size: 17px;
+  margin-bottom: 20px;
 
 }
 
@@ -97,9 +97,9 @@
   width: 50px;
   border: 1px solid #30C6FD;
   background-size: cover;
-  position: absolute;
-  top: 4px;
-  left: 15px;
+  // position: absolute;
+  // top: 4px;
+  // left: 15px;
 }
 
 // .review-user {
@@ -107,9 +107,9 @@
 // }
 
 .review-username {
-  position: absolute;
-  left: 70px;
-  top: 0px;
+  // position: absolute;
+  // left: 70px;
+  // top: 0px;
   font-size: 24px;
 }
 
