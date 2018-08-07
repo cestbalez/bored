@@ -25,7 +25,6 @@
 .article-picture {
   height: 530px;
   width: 350px;
-  // border: solid 4px black;
   border-radius: 3px;
   box-shadow: 4px 6px 0 0 rgba(0,0,0,0.1);
   color: white;
@@ -35,7 +34,6 @@
 .article {
   height: 530px;
   width: 580px;
-  // border: solid 4px black;
   margin-right: 0px;
   color: white;
   padding: 25px;
@@ -64,16 +62,31 @@
 .reviews {
   height: 400px;
   width: 100%;
-  border: solid 4px black;
   color: white;
   border-bottom: transparent;
-  text-align: center;
+  text-align: left;
+  color: #E8EEF2;
 }
 
 .review {
-  border: solid 2px black;
+  border: solid 2px #30C6FD;
   height: 150px;
   width: 100%;
   color: white;
   margin: 0px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  h3 {
+    margin-top: 5px;
+  }
+}
+
+#date-review {
+  margin-top: -37px;
+  margin-left: 195px;
+}
+
+#review-text {
+  margin-top: 10px;
 }
