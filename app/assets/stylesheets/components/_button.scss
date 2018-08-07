@@ -26,16 +26,23 @@
 }
 
 .button.add-board {
-  width: 130px;
-  height: 30px;
+  width: 145px;
+  height: 36px;
   font-weight: bold;
   text-align: center;
   font-size: 14px;
-  text-transform: lowercase;
-  color: #E8EEF2;
+  text-transform: uppercase;
   border: solid 2px #E8EEF2;
   margin: 0 auto;
   margin-top: 5%;
+  line-height: 2.3;
+  letter-spacing: .8px;
+}
+
+.button.add-board:hover {
+  width: 148px;
+  height: 39px;
+  line-height: 2.6;
 }
 
 #login {
