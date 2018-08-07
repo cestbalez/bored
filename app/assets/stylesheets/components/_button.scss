@@ -1,4 +1,4 @@
-.button{
+.button {
   font-family: Roboto;
   background-color: #5B6065;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.55);
@@ -16,16 +16,37 @@
   align-self: center;
 }
 
-.button.btn-browse.home{
+.button.btn-browse.home {
   position: absolute;
   top: 50px;
   text-align: center;
   left: 50%;
   margin-left: -125px;
-  line-height: 2;
+  line-height: 2.1;
 }
 
-#login{
+.button.add-board {
+  width: 145px;
+  height: 36px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: solid 2px #E8EEF2;
+  margin: 0 auto;
+  margin-top: 5%;
+  line-height: 2.3;
+  letter-spacing: .8px;
+  margin-bottom: 5%;
+}
+
+.button.add-board:hover {
+  width: 148px;
+  height: 39px;
+  line-height: 2.6;
+}
+
+#login {
   width: 124px;
   height: 30px;
   font-weight: regular;
@@ -33,5 +54,5 @@
   text-transform: lowercase;
   color: #E8EEF2;
   border: solid 2px #E8EEF2;
-  margin-left: -50%
+  margin-left: -50%;
 }

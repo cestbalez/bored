@@ -27,7 +27,7 @@
   width: 350px;
   border-radius: 3px;
   box-shadow: 4px 6px 0 0 rgba(0,0,0,0.1);
-  color: white;
+  color: #E8EEF2;
   background-size: cover;
 }
 
@@ -35,7 +35,7 @@
   height: 530px;
   width: 580px;
   margin-right: 0px;
-  color: white;
+  color: #E8EEF2;
   padding: 25px;
   display: flex;
   align-items: center;
@@ -45,16 +45,6 @@
   text-align: left;
 }
 
-.specifics {
-  height: 200px;
-  width: 350px;
-  border: solid 3px black;
-  bottom: 30px;
-  left: 75px;
-  color: white;
-  margin-bottom: 20px;
-}
-
 .booking-button {
   background-color: #b2b2b2;
 }
@@ -62,31 +52,93 @@
 .reviews {
   height: 400px;
   width: 100%;
-  color: white;
   border-bottom: transparent;
   text-align: left;
   color: #E8EEF2;
 }
 
 .review {
-  border: solid 2px #30C6FD;
-  height: 150px;
+  border-left: solid 4px #30C6FD;
+  height: 130px;
   width: 100%;
-  color: white;
+  color: #E8EEF2;
   margin: 0px;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 10px;
+  position: relative;
   h3 {
     margin-top: 5px;
   }
+  margin-top: 15px;
 }
 
-#date-review {
+.date-review {
   margin-top: -37px;
   margin-left: 195px;
+  position: absolute;
+  top: 71px;
+  left: -114px;
+  font-size: 15px;
 }
 
-#review-text {
+.review-text {
   margin-top: 10px;
+  position: absolute;
+  top: 50px;
+  left: 16px;
+  font-size: 17px;
+
 }
+
+.card-avatar-review {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #30C6FD;
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: 15px;
+}
+
+// .review-user {
+//   position: relative;
+// }
+
+.review-username {
+  position: absolute;
+  left: 70px;
+  top: 0px;
+  font-size: 24px;
+}
+
+.article-content {
+  background-color: #655C73;
+  padding: 10px 20px;
+  border-left: 3px solid #30C6FD;
+}
+
+.price-description {
+  margin-left: 420px;
+  margin-top: -28px;
+}
+
+.book-now {
+  width: 130px;
+  height: 30px;
+  background: #5B6065;
+  margin-top: 10px;
+  border-radius: 45px;
+  box-shadow: 1px 7px 20px rgba(0, 0, 0, 0.55);
+  text-transform: uppercase;
+  span {
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+}
+
+.book-now:hover {
+  color: #30C6FD;
+}
+
