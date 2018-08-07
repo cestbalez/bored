@@ -28,6 +28,9 @@
                 <% months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
                 <%= months[review.created_at.month + 1] %> <%= review.created_at.year %>
               </div>
+              <% review.rating.times do %>
+              <%= image_tag "Star.png", class: "review-star" %>
+              <% end %>
             </div>
           </div>
           <div class="review-text">
