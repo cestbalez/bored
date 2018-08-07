@@ -1,4 +1,4 @@
-<div class="container">
+<div class="booking-wrapper">
 <h1>Book <%= @board.user.username %>'s board</h1>
   <div class="row">
     <div class="booking-form">
@@ -6,8 +6,9 @@
       <%= simple_form_for [ board, booking ] do |f| %>
         <%= f.input :start_date, as: :date, start_day: Date.today.day, html5: true%>
         <%= f.input :end_date, as: :date, start_day: tomorrow, html5: true %>
+        <%= f.input :price, as: :hidden, input_html: { id: 'booking-price', value: 35 } %>
         <p>Total price: <span id="total_booking_price"></span>$</p>
-        <%= f.button :submit %>
+        <%= f.button :submit, class: "booking-button" %>
       <% end %>
     </div>
   </div>
@@ -22,7 +23,8 @@
   totalDays = (new Date(end) - new Date(start)) / 86400000
   calculatedPrice = totalDays * dailyPrice
   console.log(calculatedPrice)
- document.querySelector('#total_booking_price').innerText = calculatedPrice
+  document.querySelector('#total_booking_price').innerText = calculatedPrice
+  document.getElementById('booking-price').value = calculatedPrice;
 }
 
   document.querySelector('#booking_end_date').addEventListener(('change'), changeIf)

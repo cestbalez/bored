@@ -6,22 +6,26 @@
       <div class="article-content">
       <h4><%= @board.title %></h4>
       <p><%= @board.description %></p>
+      <div class="book-now">
       <a data-toggle="modal" data-target="#booking-modal">Book now</a>
+      <p>$<%= @board.price %></p>
+      </div>
       </div>
     </div>
   </div>
 
   <div class="flex-container bottom">
 
-    <div class="reviews"><p>Reviews</p>
+    <div class="reviews">
+      <h3>Reviews</h3>
       <% @board.reviews.each do |review| %>
       <div class= "review">
         <p>ceci est une review</p>
         <div class="review-user">
-          <div class= "card-avatar" style="background-image: url(<%= cl_image_path review.user.photo %>)">
+          <div class= "card-avatar" style="background-image: url(<%= cl_image_path review.user.photo %>)"></div>
           <h3><%= review.user.username %></h3>
           <div id="date-review">
-            <% months = [January, February, March, April, May, June, July, August, September, October, November, December] %>
+            <% months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
             <%= months[review.created_at.month + 1] %> <%= review.created_at.year %>
           </div>
         </div>

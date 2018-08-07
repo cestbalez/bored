@@ -4,7 +4,7 @@
 
   <div class="booking-container">
     <h3 style="
-    text-align: center;">Your bookings</h3>
+    text-align: center; margin-top: 15px;">Your bookings</h3>
     <div class="booking-content">
       <% @my_bookings.each do |booking|%>
         <ul>
@@ -12,6 +12,7 @@
             <li><%= booking.user.username %></li>
             <li><%= booking.board.title %></li>
             <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
+            <li><%= link_to "Add a review", new_board_review_path(booking.board) %></li>
           </div>
         </ul>
       <% end %>
@@ -20,7 +21,7 @@
 
   <div class="booking-container">
     <h3 style="
-    text-align: center;">Boards manager</h3>
+    text-align: center; margin-top: 15px;">Boards manager</h3>
     <div class="booking-content">
       <div class="board-manager-cards">
         <% current_user.boards.each do |board| %>
@@ -28,11 +29,10 @@
             <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
             <ul>
               <div class="board-manager-status list-unstyled">
-                <p>Board status</p>
-                <li><%= board.category %></li>
-                <li><%= board.title %></li>
-                <li><%= board.location %></li>
-                <li><%= board.availability %></li>
+                <p style="text-align: center;"><strong>Board status</strong></p>
+                <li><strong>Type:</strong> <%= board.category %></li>
+                <li><strong>Title:</strong> <%= board.title %></li>
+                <li><strong>Location:</strong> <%= board.location %></li>
                 <li><%= board.availability %></li>
               </div>
             </ul>
@@ -42,7 +42,7 @@
     </div>
     <%= link_to "Add board", new_board_path %>
   </div>
-  <a data-toggle="modal" data-target="#new-board-modal">Add Board with a modal!</a>
+  <a data-toggle="modal" data-target="#new-board-modal">Add new board</a>
 </div>
 
 <div class="modal fade centered-modal login-modal" id="new-board-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

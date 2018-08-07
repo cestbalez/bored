@@ -17,10 +17,17 @@
   justify-content: space-between;
 }
 
+.book-now {
+  display: flex;
+  justify-content: space-between;
+}
+
 .article-picture {
   height: 530px;
   width: 350px;
-  border: solid 4px black;
+  // border: solid 4px black;
+  border-radius: 3px;
+  box-shadow: 4px 6px 0 0 rgba(0,0,0,0.1);
   color: white;
   background-size: cover;
 }
@@ -28,7 +35,7 @@
 .article {
   height: 530px;
   width: 580px;
-  border: solid 4px black;
+  // border: solid 4px black;
   margin-right: 0px;
   color: white;
   padding: 25px;
@@ -50,6 +57,9 @@
   margin-bottom: 20px;
 }
 
+.booking-button {
+  background-color: #b2b2b2;
+}
 
 .reviews {
   height: 400px;
@@ -57,6 +67,7 @@
   border: solid 4px black;
   color: white;
   border-bottom: transparent;
+  text-align: center;
 }
 
 .review {
