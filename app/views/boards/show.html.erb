@@ -1,17 +1,16 @@
-<div id="background">
-  <div class="container main">
-    <div class="flex-container top">
-      <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
-      </div>
-      <div class="article">
-        <div class="article-content">
-          <h4><%= @board.title %></h4>
-          <p><%= @board.description %></p>
-          <div class="book-now">
-            <a data-toggle="modal" data-target="#booking-modal">Book now</a>
-            <p>$<%= @board.price %></p>
-          </div>
+
+<div class="container main">
+  <div class="flex-container top">
+    <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
+    </div>
+    <div class="article">
+      <div class="article-content">
+        <h4><%= @board.title %></h4>
+        <p><%= @board.description %></p>
+        <div class="book-now">
+          <span data-toggle="modal" data-target="#booking-modal">Book now</span>
         </div>
+        <div class="price-description"><p>$<%= @board.price %>/day</p></div>
       </div>
     </div>
 
