@@ -12,6 +12,7 @@
             <li><%= booking.board.user.username %></li>
             <li><%= booking.board.title %></li>
             <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
+            <button class="generate-reviews" data-value="<%= booking.board.id %>" data-toggle="modal" data-target="#review-modal">Add review</button>
             <li><%= link_to "Add a review", new_board_review_path(booking.board) %></li>
           </div>
         </ul>
@@ -56,8 +57,34 @@
 </form> -->
 
 
+<script>
+  let boardBookingIds = document.querySelectorAll(".generate-reviews");
+  let reviewForm = document.getElementById('review-form');
+  const bookingCount = boardBookingIds.length;
+  for (let i = 0; i <= bookingCount; i += 1) {
+    boardBookingIds[i].addEventListener('click', function() {
+      let boardId = boardBookingIds[i].getAttribute("data-value");
+      let reviewForm = document.querySelector('#new_review');
+      reviewForm.action = `/boards/${boardId}/reviews`;
+    });
+  }
+</script>
 
+<!-- /boards/:board_id/reviews/new -->
 
-
-
-
+<div class="modal fade centered-modal review-modal" id="review-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content review-modal-content">
+      <div class="review-wrapper">
+        <div class="review-container">
+          <h1>Add a new review</h1>
+           <%= simple_form_for [ Board.last, Review.new ] do |f| %>
+            <%= f.input :content %>
+            <%= f.input :rating %>
+            <%= f.button :submit, class: "booking-button" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
