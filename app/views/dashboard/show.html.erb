@@ -29,10 +29,10 @@
             <div class="board-manager-picture"><%= cl_image_tag board.photo %></div>
             <ul>
               <div class="board-manager-status list-unstyled">
-                <p style="text-align: center;"><strong>Board status</strong></p>
-                <li><strong>Type:</strong> <%= board.category %></li>
-                <li><strong>Title:</strong> <%= board.title %></li>
-                <li><strong>Location:</strong> <%= board.location %></li>
+                <p style="text-align: center; padding-top: 10px;"><strong>Board status</strong></p>
+                <li><strong>Type</strong>: <%= board.category %></li>
+                <li><strong>Title</strong>: <%= board.title %></li>
+                <li><strong>Location</strong>: <%= board.location %></li>
                 <li><%= board.availability %></li>
                 <p>Board unavailable ?<input type="checkbox" id="availability"></p>
               </div>
