@@ -22,7 +22,11 @@
       <!-- <div class= "review"> -->
         <div class= "flex-container review">
         <div class="review-user">
-          <div class= "card-avatar-review" style="background-image: url(<%= cl_image_path review.user.photo %>)"></div>
+          <div class= "card-avatar-review" style="background-image: url(<%= cl_image_path review.user.photo %>)">
+          </div>
+          <% review.rating.times do %>
+              <%= image_tag "Star.png", class: "review-star" %>
+            <% end %>
           <h3 class="review-username"><%= review.user.username %></h3>
           <div class="date-review">
             <% months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
