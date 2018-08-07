@@ -32,15 +32,17 @@
 .shaka {
   padding: 0;
   text-align: center;
+  margin-top: -2px;
   img {
     margin-right: 5%;
     max-width: auto;
-    height: auto;
+    height: 50%;
   }
 }
 .money {
   padding: 0;
   text-align: center;
+  margin-top: -16px;
   img {
     max-width: 100%;
     height: auto
@@ -49,6 +51,7 @@
 .friends {
   padding: 0;
   text-align: center;
+  margin-top: -11px;
   img {
     max-width: 100%;
     height: auto
