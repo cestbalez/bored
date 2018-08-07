@@ -46,6 +46,25 @@
   line-height: 2.6;
 }
 
+.button.add-review {
+  width: 112px;
+  height: 27px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: solid 2px #E8EEF2;
+  margin: 0 auto;
+  margin-top: 1%;
+  line-height: 1.6;
+  letter-spacing: .8px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.55);
+}
+
+.button.add-review:hover {
+  color: #30C6FD;
+}
+
 #login {
   width: 124px;
   height: 30px;

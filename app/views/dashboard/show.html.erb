@@ -12,8 +12,7 @@
             <li><%= booking.board.user.username %></li>
             <li><%= booking.board.title %></li>
             <li>from <%= booking.start_date %> to <%= booking.end_date %></li>
-            <button class="generate-reviews" data-value="<%= booking.board.id %>" data-toggle="modal" data-target="#review-modal">Add review</button>
-            <li><%= link_to "Add a review", new_board_review_path(booking.board) %></li>
+            <button class="generate-reviews button add-review" data-value="<%= booking.board.id %>" data-toggle="modal" data-target="#review-modal">Add review</button>
           </div>
         </ul>
       <% end %>
