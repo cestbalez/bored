@@ -1,42 +1,47 @@
-<div class="container main">
-  <div class="flex-container top">
-    <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
-    </div>
-    <div class="article">
-      <div class="article-content">
-        <h4><%= @board.title %></h4>
-        <p><%= @board.description %></p>
-        <div class="book-now">
-          <a data-toggle="modal" data-target="#booking-modal">Book now</a>
-          <p>$<%= @board.price %></p>
+<div id="background">
+  <div class="container main">
+    <div class="flex-container top">
+      <div class="article-picture" style="background-image: url(<%= cl_image_path @board.photo %>)">
+      </div>
+      <div class="article">
+        <div class="article-content">
+          <h4><%= @board.title %></h4>
+          <p><%= @board.description %></p>
+          <div class="book-now">
+            <a data-toggle="modal" data-target="#booking-modal">Book now</a>
+            <p>$<%= @board.price %></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="flex-container bottom">
+    <div class="flex-container bottom">
 
-    <div class="reviews">
-      <h3>Reviews</h3>
-      <% @board.reviews.each do |review| %>
-      <div class= "review">
-        <div class="review-user">
-          <div class= "card-avatar-review" style="background-image: url(<%= cl_image_path review.user.photo %>)"></div>
-          <h3 id="review-username"><%= review.user.username %></h3>
-          <div id="date-review">
-            <% months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
-            <%= months[review.created_at.month + 1] %> <%= review.created_at.year %>
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <% @board.reviews.each do |review| %>
+        <div class= "review">
+          <div class="review-user">
+            <div class= "card-avatar-review" style="background-image: url(<%= cl_image_path review.user.photo %>)"></div>
+            <h3 class="review-username"><%= review.user.username %></h3>
+            <div class="date-review">
+              <% months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
+              <%= months[review.created_at.month + 1] %> <%= review.created_at.year %>
+            </div>
+          </div>
+          <div class="review-text">
+            <%= review.content %>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-</div>
 
-<div class="modal fade centered-modal login-modal" id="booking-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <%= render 'bookings/new', board:Board.find(params[:id]), booking:Booking.new %>
+  <div class="modal fade centered-modal login-modal" id="booking-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <%= render 'bookings/new', board:Board.find(params[:id]), booking:Booking.new %>
+      </div>
     </div>
   </div>
 </div>
