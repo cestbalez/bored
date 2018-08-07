@@ -45,16 +45,6 @@
   text-align: left;
 }
 
-.specifics {
-  height: 200px;
-  width: 350px;
-  border: solid 3px black;
-  bottom: 30px;
-  left: 75px;
-  color: #E8EEF2;
-  margin-bottom: 20px;
-}
-
 .booking-button {
   background-color: #b2b2b2;
 }
@@ -69,7 +59,7 @@
 
 .review {
   border-left: solid 4px #30C6FD;
-  height: 110px;
+  height: 130px;
   width: 100%;
   color: #E8EEF2;
   margin: 0px;
@@ -83,7 +73,7 @@
   margin-top: 15px;
 }
 
-#date-review {
+.date-review {
   margin-top: -37px;
   margin-left: 195px;
   position: absolute;
@@ -95,7 +85,7 @@
 .review-text {
   margin-top: 10px;
   position: absolute;
-  bottom: 5px;
+  top: 50px;
   left: 16px;
   font-size: 17px;
 
@@ -116,7 +106,7 @@
 //   position: relative;
 // }
 
-#review-username {
+.review-username {
   position: absolute;
   left: 70px;
   top: 0px;
@@ -151,3 +141,4 @@
 .book-now:hover {
   color: #30C6FD;
 }
+
