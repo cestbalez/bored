@@ -4,7 +4,7 @@ require 'nokogiri'
 rider_src = []
 rider_name = []
 
-PAGE = "http://streetleague.com/pros"
+PAGE = "http://streetleague.com/women"
 
 html_doc = Nokogiri.HTML(open(PAGE))
 
@@ -29,7 +29,7 @@ rider_src.each_with_index do |link, i|
   p "#{i} - #{rider_name[i]}"
 
   download = open(link)
-  IO.copy_stream(download, "../app/assets/images/riders/#{rider_name[i]}.jpg")
+  IO.copy_stream(download, "../app/assets/images/women/#{rider_name[i]}.jpg")
 
   # i += 1
 end
